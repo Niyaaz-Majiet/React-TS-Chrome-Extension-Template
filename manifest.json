@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "React Chrome Extension React Pokemon Practice",
+  "description": "React Chrome Extension React Pokemon Practice",
+  "action": {
+    "default_popup": "js/index.html",
+    "default_title": "React Chrome Pokemon Extension"
+  }
+}

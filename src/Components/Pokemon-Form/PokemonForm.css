@@ -1,0 +1,28 @@
+.pokemon-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pokemon-img {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+
+.back-btn {
+  position: relative;
+  width: fit-content;
+  top: 0;
+  left: 0;
+}
+
+input {
+  width: 100px;
+  float: right;
+}
+
+label {
+  padding: 3px;
+  text-align: left;
+}
