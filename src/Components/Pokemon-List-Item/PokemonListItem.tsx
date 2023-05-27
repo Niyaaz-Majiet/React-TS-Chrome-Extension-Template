@@ -19,7 +19,7 @@ const PokemonListItem: FC<PropType> = ({ name, url }) => {
       className="pokemon-list-item-container"
       onClick={() => handleNavigate(url)}
     >
-      {name}
+      {name.toUpperCase()}
     </div>
   );
 };

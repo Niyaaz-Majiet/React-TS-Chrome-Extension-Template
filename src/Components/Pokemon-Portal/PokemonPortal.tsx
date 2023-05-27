@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./PokemonPortal.css";
 import PokemonListItem from "../Pokemon-List-Item/PokemonListItem";
 
 const PokemonPortal = () => {
+  const topRef = useRef<HTMLSpanElement>(null);
+  const bottomRef = useRef<HTMLSpanElement>(null);
   const [pokemonList, updatePokemonList] = useState([]);
 
   useEffect(() => {
@@ -17,14 +19,28 @@ const PokemonPortal = () => {
     dataFetch();
   }, []);
 
+  const goTo = (top: boolean) => {
+    if (top) {
+      topRef.current?.scrollIntoView();
+    } else {
+      bottomRef.current?.scrollIntoView();
+    }
+  };
+
   return (
     <div className="pokemon-portal-container">
+      <span ref={topRef} />
+      <div className="go-to-btn-container">
+        <button onClick={() => goTo(true)}>TOP</button>
+        <button onClick={() => goTo(false)}>BOTTOM</button>
+      </div>
       {pokemonList.length > 0 &&
         pokemonList.map((item: any, index) => {
           return (
             <PokemonListItem key={index} name={item.name} url={item.url} />
           );
         })}
+      <span ref={bottomRef} />
     </div>
   );
 };

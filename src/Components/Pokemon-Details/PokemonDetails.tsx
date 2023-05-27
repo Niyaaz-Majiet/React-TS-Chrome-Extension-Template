@@ -7,7 +7,7 @@ const PokemonDetails = () => {
   const search = useLocation().search;
   const searchParams = new URLSearchParams(search);
   const pokemonUrl = searchParams.get("url") || "";
-  const [pokemonData, setPokemonData] = useState(null);
+  const [pokemonData, setPokemonData] = useState({});
   const [fetched, setFetched] = useState(false);
 
   useEffect(() => {

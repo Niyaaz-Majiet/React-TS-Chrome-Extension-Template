@@ -1,4 +1,15 @@
 .pokemon-list-item-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.pokemon-list-item-container:hover {
+  z-index: 1000;
+  border: 1px double white;
+  text-decoration: underline;
 }
