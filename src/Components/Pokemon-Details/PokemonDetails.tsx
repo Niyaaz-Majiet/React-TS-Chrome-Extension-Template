@@ -12,14 +12,14 @@ const PokemonDetails = () => {
   const [fetched, setFetched] = useState(false);
 
   useEffect(() => {
-    const dataFetch = async () => {
+    const dataFetch = async (pokemonUrl: string) => {
       const data = await (await fetch(pokemonUrl)).json();
       setFetched(true);
       setPokemonData(data);
     };
 
-    pokemonUrl !== "" && dataFetch();
-  }, []);
+    dataFetch(pokemonUrl);
+  }, [pokemonUrl]);
 
   return fetched && pokemonData !== null ? (
     <PokemonForm pokemonData={pokemonData} />
