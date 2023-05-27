@@ -3,21 +3,26 @@
   flex-direction: column;
 }
 
-.go-to-btn-container {
-  z-index: 100;
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.go-to-btn {
+  left: 0;
   position: absolute;
   color: black;
-  width: 33%;
-  padding: 8px;
-  top: 0;
+  width: fit-content;
 }
 
 button {
   font-weight: bolder;
   color: white;
   border: none;
-  margin: 8px;
-  width: 70px;
+  margin: 16px;
   border-radius: 8px;
   background: rgb(34, 193, 195);
   background: linear-gradient(
@@ -29,8 +34,5 @@ button {
 
 button:hover {
   text-decoration: line-through;
-}
-
-span {
-  height: 25px;
+  z-index: 1000;
 }

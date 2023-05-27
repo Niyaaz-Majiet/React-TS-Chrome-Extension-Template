@@ -2,12 +2,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  height: fit-content;
+  align-self: center;
 }
 
 .pokemon-img {
   width: 100px;
   height: 100px;
   align-self: center;
+  border: 4px solid white;
+  margin: 8px;
+  border-radius: 80px;
+  padding: 8px;
 }
 
 .back-btn {

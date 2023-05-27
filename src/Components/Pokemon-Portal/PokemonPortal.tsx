@@ -30,10 +30,12 @@ const PokemonPortal = () => {
   return (
     <div className="pokemon-portal-container">
       <span ref={topRef} />
-      <div className="go-to-btn-container">
-        <button onClick={() => goTo(true)}>TOP</button>
-        <button onClick={() => goTo(false)}>BOTTOM</button>
-      </div>
+      <button className="go-to-btn top" onClick={() => goTo(true)}>
+        {"^"}
+      </button>
+      <button className="go-to-btn bottom" onClick={() => goTo(false)}>
+        {"↓"}
+      </button>
       {pokemonList.length > 0 &&
         pokemonList.map((item: any, index) => {
           return (
